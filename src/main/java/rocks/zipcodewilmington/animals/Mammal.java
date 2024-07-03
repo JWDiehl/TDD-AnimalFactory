@@ -9,7 +9,7 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public abstract class Mammal implements Animal {
-    private final Integer id;
+    private Integer id;
     private ArrayList<Food> eatenMeals;
     private String name;
     private Date birthDate;
@@ -21,33 +21,45 @@ public abstract class Mammal implements Animal {
         this.id = id;
     }
 
+    public Mammal() {
+        this.id = 0;
+        this.eatenMeals = new ArrayList<>();
+    }
+
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public Date getBirthDate() {
+
         return birthDate;
     }
 
     public void setBirthDate(Date birthDate) {
+
         this.birthDate = birthDate;
     }
 
 
     public Integer getNumberOfMealsEaten() {
+
         return eatenMeals.size();
     }
 
     public void eat(Food food) {
+
         eatenMeals.add(food);
     }
 
     @Override
     public Integer getId() {
+
         return id;
     }
 }
