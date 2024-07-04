@@ -24,6 +24,7 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     @Test
     public void testRemoveID() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.add(cat);
         CatHouse.remove(cat.getId());

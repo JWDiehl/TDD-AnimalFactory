@@ -19,6 +19,7 @@ public class DogHouseTest {
 
     @Test
     public void testAddDogHouse () {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.add(dog);
         Integer expected = 1;
@@ -29,6 +30,7 @@ public class DogHouseTest {
 
     @Test
     public void testDogRemoveID() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.add(dog);
         DogHouse.remove(dog.getId());
@@ -40,6 +42,7 @@ public class DogHouseTest {
 
     @Test
     public void testRemoveDogHouse() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.add(dog);
         DogHouse.remove(dog);
@@ -60,6 +63,7 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
     @Test
     public void testGetNumberOfDogs1() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.getNumberOfDogs();
         Integer expected = 0;
